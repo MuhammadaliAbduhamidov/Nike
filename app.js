@@ -12,8 +12,44 @@ const back = document.querySelector(".back i");
 
 const modal = document.querySelector(".modal");
 const content = document.querySelector(".content__img img");
+const menu = document.querySelector(".menu");
+const X = document.querySelector(".backSpase");
+const navbarMobile = document.querySelector(".navbar nav ul");
+const navMobile = document.querySelector(".navbar nav");
 
-console.log(navbar);
+function myFunction(x) {
+  if (x.matches) {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+}
+
+let x = window.matchMedia("(max-width: 700px)");
+myFunction(x);
+
+X.style.display = "none";
+
+const openMenu = () => {
+  navbarMobile.style.transform = "translateX(0)";
+  navMobile.classList.add("navMobile");
+  document.body.style.overflow = "hidden";
+  menu.style.display = "none";
+};
+
+const closeMenu = () => {
+  navbarMobile.style.transform = "translateX(-100%)";
+  navMobile.classList.remove("navMobile");
+  document.body.style.overflow = "auto";
+  X.style.display = "none";
+  menu.style.display = "block";
+};
+
+menu.addEventListener("click", openMenu);
+
+X.addEventListener("click", closeMenu);
+
+navMobile.addEventListener("click", closeMenu);
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 2500) {
@@ -137,7 +173,7 @@ new ProductItem(
 let offset = 0;
 
 next.addEventListener("click", () => {
-  offset = offset - 600;
+  offset = offset - 500;
   if (offset < -1200) {
     offset = 0;
   }
@@ -159,11 +195,14 @@ next.addEventListener("click", () => {
 });
 
 back.addEventListener("click", () => {
-  offset = offset + 600;
+  offset = offset + 500;
   if (offset > 0) {
     offset = -1200;
   }
   console.log(offset);
+  slider.forEach((item) => {
+    item.style.transform = `translateX(${offset}px)`;
+  });
   circle.forEach((item, i) => {
     if (offset == -1200) {
       hideTabContent();
@@ -175,9 +214,6 @@ back.addEventListener("click", () => {
       hideTabContent();
       showTabContent(0);
     }
-  });
-  slider.forEach((item) => {
-    item.style.transform = `translateX(${offset}px)`;
   });
 });
 
