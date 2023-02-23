@@ -92,6 +92,11 @@
   z-index: 2;
   position: relative;
 }
+@media (max-width: 400px) {
+  .navbar .navbar__end button {
+    font-size: 13px;
+  }
+}
 .navbar .navbar__end button:hover {
   background: transparent;
   border: 1px solid #5cbe3a;
@@ -144,6 +149,11 @@
     font-size: 50px;
   }
 }
+@media (max-width: 400px) {
+  .intro .intro__text > h1 {
+    font-size: 45px;
+  }
+}
 .intro .intro__text .intro__nike {
   display: flex;
   align-items: center;
@@ -185,6 +195,11 @@
   line-height: 130%;
   color: #5cbe3a;
 }
+@media (max-width: 400px) {
+  .intro .intro__text > span {
+    font-size: 28px;
+  }
+}
 .intro .intro__text .btn__group {
   display: flex;
   align-items: center;
@@ -204,6 +219,11 @@
   border: 1px solid transparent;
   outline: none;
   cursor: pointer;
+}
+@media (max-width: 400px) {
+  .intro .intro__text .btn__group button {
+    font-size: 13px;
+  }
 }
 .intro .intro__text .btn__group button:hover {
   background: transparent;
@@ -229,6 +249,11 @@
   outline: none;
   cursor: pointer;
 }
+@media (max-width: 400px) {
+  .intro .intro__text .btn__group button:nth-child(2):hover {
+    font-size: 13px;
+  }
+}
 .intro .intro__text .text__flex {
   display: flex;
   align-items: center;
@@ -245,6 +270,11 @@
   font-size: 85px;
   line-height: 120%;
   color: #5cbe3a;
+}
+@media (max-width: 400px) {
+  .intro .intro__text .text__flex .customer h1 {
+    font-size: 70px;
+  }
 }
 .intro .intro__text .text__flex .customer span {
   font-style: normal;
@@ -283,6 +313,11 @@
     width: 500px;
   }
 }
+@media (max-width: 500px) {
+  .intro .intro__img .slider {
+    width: 350px;
+  }
+}
 .intro .intro__img .slider .slider__img img {
   width: 700px;
   z-index: 2;
@@ -292,6 +327,11 @@
 @media (max-width: 1300px) {
   .intro .intro__img .slider .slider__img img {
     width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .intro .intro__img .slider .slider__img img {
+    width: 350px;
   }
 }
 .intro .intro__img .slider .active1 {
@@ -305,12 +345,22 @@
     transform: translateX(-500px);
   }
 }
+@media (max-width: 500px) {
+  .intro .intro__img .slider .active2 {
+    transform: translateX(-350px);
+  }
+}
 .intro .intro__img .slider .active3 {
   transform: translateX(-1400px);
 }
 @media (max-width: 1300px) {
   .intro .intro__img .slider .active3 {
     transform: translateX(-1000px);
+  }
+}
+@media (max-width: 500px) {
+  .intro .intro__img .slider .active3 {
+    transform: translateX(-700px);
   }
 }
 .intro .intro__img .slider__item {
@@ -332,6 +382,12 @@
   z-index: 3;
   cursor: pointer;
 }
+@media (max-width: 400px) {
+  .intro .intro__img .slider__item .slider__btn {
+    width: 90px;
+    height: 90px;
+  }
+}
 .intro .intro__img .slider__item .slider__btn img {
   width: 100%;
 }
@@ -347,6 +403,11 @@
   width: 420px;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .product .product__text {
+    width: 100%;
+  }
+}
 .product .product__text h1 {
   font-style: normal;
   font-weight: 700;
@@ -354,6 +415,11 @@
   line-height: 130%;
   text-align: center;
   color: #000000;
+}
+@media (max-width: 500px) {
+  .product .product__text h1 {
+    font-size: 30px;
+  }
 }
 .product .product__text p {
   font-style: normal;
@@ -363,6 +429,11 @@
   text-align: center;
   color: #051101;
   opacity: 0.7;
+}
+@media (max-width: 500px) {
+  .product .product__text p {
+    font-size: 14px;
+  }
 }
 .product .product__box {
   display: flex;
@@ -384,6 +455,11 @@
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 50px;
+}
+@media (max-width: 500px) {
+  .product .product__box .product__flex .product__img {
+    height: 230px;
+  }
 }
 .product .product__box .product__flex h1 {
   font-style: normal;
@@ -421,6 +497,11 @@
   border: 1px solid #5cbe3a;
   color: #5cbe3a;
 }
+@media (max-width: 400px) {
+  .product .product__box .product__flex button {
+    font-size: 13px;
+  }
+}
 .product .product__box .product__flex button:hover {
   background: #5cbe3a;
   color: #fff;
@@ -447,6 +528,11 @@
     padding: 120px 40px;
   }
 }
+@media (max-width: 500px) {
+  .content .content__box {
+    padding: 60px 20px;
+  }
+}
 .content .content__box h1 {
   font-family: "Raleway";
   font-style: normal;
@@ -454,6 +540,11 @@
   font-size: 44px;
   line-height: 130%;
   color: #051101;
+}
+@media (max-width: 500px) {
+  .content .content__box h1 {
+    font-size: 33px;
+  }
 }
 .content .content__box p {
   font-style: normal;
@@ -473,10 +564,20 @@
     margin-top: -60px;
   }
 }
+@media (max-width: 500px) {
+  .content .content__img {
+    margin-top: -40px;
+  }
+}
 .content .content__img img {
   width: 100%;
   height: 350px;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  .content .content__img img {
+    height: auto;
+  }
 }
 .content .modal {
   width: 100%;
@@ -489,6 +590,18 @@
   display: none;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 800px) {
+  .content .modal .modal__body iframe {
+    width: 500px;
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .content .modal .modal__body iframe {
+    width: 350px;
+    height: 250px;
+  }
 }
 .content .modal__active {
   display: flex;
@@ -540,6 +653,11 @@
   color: #5cbe3a;
   border: 1px solid #5cbe3a;
 }
+@media (max-width: 400px) {
+  .rewiew .rewiew__left button {
+    font-size: 13px;
+  }
+}
 .rewiew .rewiew__left button:hover {
   background: #5cbe3a;
   color: #fff;
@@ -556,6 +674,11 @@
   background: #5cbe3a;
   opacity: 0.3;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  .rewiew .rewiew__left .rewiew__circle .circle {
+    display: none;
+  }
 }
 .rewiew .rewiew__left .rewiew__circle .active {
   opacity: 1;
@@ -575,7 +698,7 @@
 .rewiew .rewiew__right .rewiew__slider {
   margin: 60px 98px;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .rewiew .rewiew__right .rewiew__slider {
     margin: 46px;
   }
@@ -592,6 +715,11 @@
   align-items: flex-start;
   gap: 30px;
   padding: 30px 0 0;
+}
+@media (max-width: 500px) {
+  .rewiew .rewiew__right .rewiew__slider .rewiew__about {
+    flex-direction: column;
+  }
 }
 .rewiew .rewiew__right .rewiew__slider .rewiew__about .rewiew__text h2 {
   font-style: normal;
@@ -661,6 +789,11 @@
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .subscriber .sub__text {
+    width: auto;
+  }
+}
 .subscriber .sub__text h1 {
   font-style: normal;
   font-weight: 700;
@@ -692,6 +825,11 @@
   border: 1px solid transparent;
   outline: none;
   cursor: pointer;
+}
+@media (max-width: 400px) {
+  .subscriber .sub__text button {
+    font-size: 13px;
+  }
 }
 .subscriber .sub__text button:hover {
   background: transparent;
@@ -738,6 +876,12 @@ footer .footer .footer__msg {
   display: flex;
   align-items: center;
   gap: 25px;
+}
+@media (max-width: 500px) {
+  footer .footer .footer__msg {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 footer .footer .footer__msg span {
   font-style: normal;

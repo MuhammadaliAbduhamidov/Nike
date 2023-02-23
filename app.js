@@ -17,6 +17,10 @@ const X = document.querySelector(".backSpase");
 const navbarMobile = document.querySelector(".navbar nav ul");
 const navMobile = document.querySelector(".navbar nav");
 
+let x = window.matchMedia("(max-width: 700px)");
+
+X.style.display = "none";
+
 function myFunction(x) {
   if (x.matches) {
     menu.style.display = "block";
@@ -24,32 +28,42 @@ function myFunction(x) {
     menu.style.display = "none";
   }
 }
-
-let x = window.matchMedia("(max-width: 700px)");
 myFunction(x);
-
-X.style.display = "none";
 
 const openMenu = () => {
   navbarMobile.style.transform = "translateX(0)";
   navMobile.classList.add("navMobile");
   document.body.style.overflow = "hidden";
   menu.style.display = "none";
+  X.style.display = "block";
 };
 
 const closeMenu = () => {
-  navbarMobile.style.transform = "translateX(-100%)";
   navMobile.classList.remove("navMobile");
   document.body.style.overflow = "auto";
   X.style.display = "none";
-  menu.style.display = "block";
 };
 
 menu.addEventListener("click", openMenu);
 
-X.addEventListener("click", closeMenu);
+X.addEventListener("click", () => {
+  menu.style.display = "block";
+  navbarMobile.style.transform = "translateX(-100%)";
+  closeMenu();
+});
 
-navMobile.addEventListener("click", closeMenu);
+navMobile.addEventListener("click", () => {
+  function myFunction(x) {
+    if (x.matches) {
+      navbarMobile.style.transform = "translateX(-100%)";
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
+  }
+  closeMenu();
+  myFunction(x);
+});
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 2500) {
@@ -172,8 +186,17 @@ new ProductItem(
 // rewiew
 let offset = 0;
 
+let z = window.matchMedia("(max-width: 500px)");
+
 next.addEventListener("click", () => {
-  offset = offset - 500;
+  function media(z) {
+    if (z.matches) {
+      offset = offset - 370;
+    } else {
+      offset = offset - 600;
+    }
+  }
+
   if (offset < -1200) {
     offset = 0;
   }
@@ -192,13 +215,24 @@ next.addEventListener("click", () => {
       showTabContent(0);
     }
   });
+  media(z);
 });
 
 back.addEventListener("click", () => {
-  offset = offset + 500;
-  if (offset > 0) {
-    offset = -1200;
+  function media(z) {
+    if (z.matches) {
+      offset = offset + 370;
+      if (offset > 0) {
+        offset = -740;
+      }
+    } else {
+      offset = offset + 600;
+      if (offset > 0) {
+        offset = -1200;
+      }
+    }
   }
+
   console.log(offset);
   slider.forEach((item) => {
     item.style.transform = `translateX(${offset}px)`;
@@ -215,6 +249,7 @@ back.addEventListener("click", () => {
       showTabContent(0);
     }
   });
+  media(z);
 });
 
 rewiewCircle.addEventListener("click", (e) => {
